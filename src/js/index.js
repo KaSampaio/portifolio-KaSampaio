@@ -14,7 +14,7 @@
 */
 const botaoMostrarProjetos = document.querySelector(".btn-mostrar-projetos");
 const projetosInativos = document.querySelectorAll(".projeto:not(.ativo)");
-const rolagemProjetos = document.getElementById('link-projetos');
+const rolagemProjetos = document.querySelector('.link-projetos');
 
 rolagemProjetos.addEventListener("click" , () =>{
   rolagem();
