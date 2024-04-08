@@ -12,13 +12,24 @@
         Passo 1 - pegar o botão e esconder ele.
 
 */
+
 const botaoMostrarProjetos = document.querySelector(".btn-mostrar-projetos");
 const projetosInativos = document.querySelectorAll(".projeto:not(.ativo)");
+const rolagemProjetos = document.getElementById('link-projetos');
+
+rolagemProjetos.addEventListener("click" , () =>{
+  rolagem();
+})
 
 botaoMostrarProjetos.addEventListener("click", () => {
   mostrarMaisProjetos();
   esconderBotao();
 });
+
+
+function rolagem() {
+  document.getElementById('meus-projetos').scrollIntoView({ behavior: 'smooth' });
+}
 
 function esconderBotao() {
   botaoMostrarProjetos.classList.add("remover");
